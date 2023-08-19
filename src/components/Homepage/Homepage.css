@@ -1,0 +1,39 @@
+.inputTodo {
+  padding: 4px;
+  width: 60%;
+  border: 2px solid #515A5A;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.buttonSubmit {
+  margin: 2%;
+  padding: 4px 6px;
+  border: 1px solid #515A5A;
+  border-radius: 3px;
+  font-weight: 700;
+}
+
+.todoList {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.item {
+  margin: .5em;
+  padding: .7em;
+  width: 80%;
+  background-color: #D7DBDD;
+  border:2px solid #515A5A;
+  border-radius: 4px;
+}
+
+.todoText {
+  display: inline-block;
+  font-weight: 600;
+}
+.todoText:first-letter {
+  text-transform: capitalize;
+}
