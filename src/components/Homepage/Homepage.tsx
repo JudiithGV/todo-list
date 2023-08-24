@@ -1,9 +1,10 @@
 import React, { useRef, useState } from "react";
 
+import { TodoItem } from "../TodoItem/TodoItem";
 import "./Homepage.css";
 
-const Homepage = () => {
-  const [ todoList, setTodoList ] = useState<string[]>([])
+export const Homepage = () => {
+  const [ todoList, setTodoList ] = useState<any>([])
   const todoRef = useRef<any>(null)
 
   const saveTodo = (event: any) => {
@@ -12,7 +13,7 @@ const Homepage = () => {
     let list = [...todoList]
     const newTodo = todoRef.current.value
     todoRef.current.value = ""
-    list.push(newTodo)
+    list.push({text: newTodo, isChecked: false})
     setTodoList(list);
   }
 
@@ -26,14 +27,10 @@ const Homepage = () => {
       <button type="submit" className="buttonSubmit">Save</button>
     </form>
     <div className="todoList">
-      {todoList ? todoList.map((todo, i) => 
-        <div key={i} className="item">
-          <input type="checkbox" className="checkbox"/>
-          <span className="todoText">{todo}</span>
-        </div>
-        ) : null}
+      {todoList ? todoList.map((item: any, i:any) => 
+        <TodoItem key={i} item={item} />
+      ) : null}
     </div>
   </div>
   )
 }
-export default Homepage

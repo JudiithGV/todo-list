@@ -1,3 +1,4 @@
+
 .inputTodo {
   padding: 4px;
   width: 60%;
@@ -19,21 +20,4 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-}
-
-.item {
-  margin: .5em;
-  padding: .7em;
-  width: 80%;
-  background-color: #D7DBDD;
-  border:2px solid #515A5A;
-  border-radius: 4px;
-}
-
-.todoText {
-  display: inline-block;
-  font-weight: 600;
-}
-.todoText:first-letter {
-  text-transform: capitalize;
 }
